@@ -39,6 +39,15 @@ export const paletteTokens: Record<
     border: "border-[#9FB8F0]",
     bokeh: ["rgba(255,154,139,0.5)", "rgba(201,198,255,0.4)", "rgba(179,229,252,0.35)"],
   },
+  nocturnoElegante: {
+    background: "bg-gradient-to-br from-[#0D0D0F] via-[#1A1A2E] to-[#16213E]",
+    backgroundAccent: "bg-[#1F1F3A]/70",
+    text: "text-[#EAEAEA]",
+    ink: "text-[#C1C1C1]",
+    highlight: "bg-[#0F3460]",
+    border: "border-[#4E4E6A]",
+    bokeh: ["rgba(15,52,96,0.45)", "rgba(22,33,62,0.4)", "rgba(74,85,162,0.35)"],
+  },
 };
 
 export function themeClassNames(palette: PaletteOption) {

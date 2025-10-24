@@ -1,139 +1,118 @@
-import type { BirthdayContent } from "@/lib/types";
+﻿import type { BirthdayContent } from "@/lib/types"; // Importa la interfaz que valida la estructura del contenido
 
-export const birthdayContent: BirthdayContent = {
-  // 🎨 Tema general: define los colores de la página.
-  theme: { palette: "dulcePastel" },
-
-  // 🖋 Tipografía para los textos principales.
-  typography: { title: "DM Serif Display", body: "Architects Daughter" },
-
-  // ✨ Efectos visuales decorativos activados o desactivados.
-  effects: {
-    confetti: true,        // Confeti al inicio o durante la animación.
-    bubbles: false,        // Desactiva burbujas.
-    bokeh: true,           // Activa efecto de luces borrosas.
-    polaroidsFloat: true,  // Las fotos tipo Polaroid flotan suavemente.
+export const birthdayContent: BirthdayContent = { // Exporta el objeto principal con toda la informacion de la carta
+  theme: { palette: "nocturnoElegante" }, // Define la paleta cromatica base usada en fondos y acentos
+  typography: { title: "DM Serif Display", body: "Architects Daughter" }, // Selecciona las tipografias para titulos y cuerpo
+  effects: { // Agrupa los efectos visuales configurables
+    confetti: true, // Activa el confeti clasico
+    hearts: true, // Habilita los corazones flotantes
+    heartColor: "#ff5f9e", // Color base para los corazones neon
+    bokeh: true, // Muestra el efecto de luces bokeh en el fondo
+    polaroidsFloat: true, // Hace flotar suavemente las fotos tipo polaroid
   },
-
-  // ⌨️ Configuración del efecto de "máquina de escribir" para la carta.
-  typewriter: {
-    speedMs: 60,                   // Velocidad entre letras (ms por carácter).
-    startDelayMs: 1000,            // Retraso antes de empezar a escribir (ms).
-    soundClicks: true,             // Reproduce clics de máquina de escribir.
-    endChime: true,                // Sonido final cuando termina de escribir.
-    liveLabel: "La carta se está escribiendo", // Descripción accesible mientras escribe.
-    finishedLabel: "Carta terminada",          // Descripción accesible al finalizar.
+  typewriter: { // Parametros del efecto maquina de escribir
+    speedMs: 60, // Velocidad en milisegundos entre cada caracter
+    startDelayMs: 1000, // Retraso antes de iniciar la animacion
+    soundClicks: true, // Reproduce clics de maquina durante la escritura
+    endChime: true, // Lanza sonido final al terminar
+    liveLabel: "La carta se esta escribiendo", // Etiqueta accesible mientras escribe
+    finishedLabel: "Carta terminada", // Etiqueta accesible al finalizar
   },
-
-  // 🗓 Línea del tiempo de recuerdos (timeline de momentos compartidos).
-  timeline: {
-    variant: "scrapbook",  // Estilo visual tipo álbum o diario.
-    ariaLabel: "Línea del tiempo de recuerdos importantes",
-    items: [
-      {
-        date: "22 de agosto de 2023",
-        title: "El día que nos conocimos",
-        text: "Ese día fue más divertido de lo que esperaba. Nunca pensé que iba a conocer a alguien como tú, y mucho menos que te volverías una amiga tan especial. Desde ese día algo me dijo que íbamos a llevarnos bien, y no me equivoqué. Me alegra un montón haber coincidido contigo.",
-        image: { url: "/dia_c.jpg", alt: "Foto del día que nos conocimos" },
+  timeline: { // Configuracion de la linea del tiempo de recuerdos
+    variant: "scrapbook", // Variante visual usada para las tarjetas
+    ariaLabel: "Linea del tiempo de recuerdos importantes", // Texto descriptivo para lectores de pantalla
+    items: [ // Coleccion de momentos destacados
+      { // Primer recuerdo destacado
+        date: "22 de agosto de 2023", // Fecha del evento
+        title: "El dia que nos conocimos", // Titulo del recuerdo
+        text: "Ese dia fue mas divertido de lo que esperaba. Nunca pense que iba a conocer a alguien como tu, y mucho menos que te volverias una amiga tan especial.", // Texto del recuerdo
+        image: { url: "/dia_c.jpg", alt: "Foto del dia que nos conocimos" }, // Imagen asociada al recuerdo
       },
-      {
-        date: "29 de agosto de 2025",
-        title: "fuimos al onomástico",
-        text: "Nos fuimos a disfrutar la música. Todo se puso muy random después, jajaja, pero lo gocé un montón. Gracias por estar ahí.",
-        image: { url: "/onomastico.jpg", alt: "Foto del onomástico" },
+      { // Segundo recuerdo destacado
+        date: "29 de agosto de 2025", // Fecha del evento
+        title: "Fuimos al onomastico", // Titulo del recuerdo
+        text: "Nos fuimos a disfrutar la musica. Todo se puso muy random despues, jajaja, pero lo goce un monton. Gracias por estar ahi.", // Texto del recuerdo
+        image: { url: "/onomastico.jpg", alt: "Foto del onomastico" }, // Imagen asociada al recuerdo
       },
-      {
-        date: "21 de septiembre de 2025",
-        title: "un Domingo normalito",
-        text: "No fue un plan épico, pero me encantó. Saliste del examen y nos pusimos a echar chisme un buen rato. Esos momentos tranquilos también valen oro.",
-        image: { url: "/random.jpg", alt: "foto casual" },
+      { // Tercer recuerdo destacado
+        date: "21 de septiembre de 2025", // Fecha del evento
+        title: "Un domingo normalito", // Titulo del recuerdo
+        text: "No fue un plan epico, pero me encanto. Saliste del examen y nos pusimos a echar chisme un buen rato. Esos momentos tranquilos tambien valen oro.", // Texto del recuerdo
+        image: { url: "/random.jpg", alt: "Foto casual" }, // Imagen asociada al recuerdo
       },
     ],
   },
-
-  // 🏠 Sección principal o “hero” de la página.
-  hero: {
-    title: "Feliz Cumple, Estefania",              // Título grande de la página.
-    emoji: "🎂",                              // Emoji decorativo.
-    emojiLabel: "Pastel de cumpleaños",       // Etiqueta accesible para el emoji.
-    scrollCta: "Ver carta",                   // Texto del botón para desplazarse a la carta.
-    scrollAriaLabel: "Ir a la carta de cumpleaños", // Etiqueta accesible del botón.
+  hero: { // Configuracion del encabezado principal
+    title: "Feliz cumple, Kimberly", // Titular grande de la pagina
+    emoji: "🎂", // Emoji decorativo mostrado junto al titulo
+    emojiLabel: "Pastel de cumpleanos", // Descripcion accesible del emoji
+    scrollCta: "Ver carta", // Texto del boton para desplazarse a la carta
+    scrollAriaLabel: "Ir a la carta de cumpleanos", // Etiqueta accesible del boton de scroll
   },
-
-  // 💌 Contenido de la carta principal.
-  letter: {
-    heading: "Una carta para ti", // Título de la carta.
+  letter: { // Contenido de la carta principal
+    heading: "Una carta para ti", // Encabezado del bloque de carta
     body:
-      "Hoy celebramos que llegaste a este mundo y que tuve la suerte de coincidir contigo.\n\n" +
-    "Te deseo un año lleno de cosas lindas: metas cumplidas, sorpresas buenas y días tranquilos.\n\n" +
-    "Que la vida te siga regalando razones para sonreír, y que nunca te falte quien te acompañe en las locuras.\n\n" +
-    "Gracias por ser como eres y por dejarme ser parte de tu historia.\n\n" +
-    "¡Feliz cumpleaños, Estefania! 🎉🎂\n\n" +
-    "Con cariño,\nMateo",
-    ariaLabel: "Carta de cumpleaños narrada como máquina de escribir", // Descripción accesible.
+      "Hoy celebramos que llegaste a este mundo y que tuve la suerte de coincidir contigo.\n\n" + // Primer parrafo de la carta
+      "Te deseo un año lleno de cosas lindas: metas cumplidas, sorpresas buenas y dias tranquilos.\n\n" + // Segundo parrafo con deseos
+      "Que la vida te siga regalando razones para sonreir, y que nunca te falte quien te acompanE en las locuras.\n\n" + // Tercer parrafo motivacional
+      "Gracias por ser como eres y por dejarme ser parte de tu historia.\n\n" + // Cuarto parrafo de agradecimiento
+      "Feliz cumpleanos, Kimberly! 🎉🎂\n\n" + // Mensaje de felicitacion final
+      "Con carino,\nMateo", // Firma de cierre
+    ariaLabel: "Carta de cumpleanos narrada como maquina de escribir", // Descripcion accesible del bloque
   },
-
-  // 📷 Sección de fotos decorativas a los lados de la carta.
-  photos: {
-    left: [
-      { url: "/photos/1.jpg", alt: "Selfie divertida" },
-      { url: "/photos/2.jpg", alt: "Camino entre árboles" },
-      { url: "/photos/3.jpg", alt: "Tazas de café" },
+  photos: { // Configuracion de las fotos decorativas laterales
+    left: [ // Riel izquierdo de fotos
+      { url: "/photos/1.jpg", alt: "Selfie divertida" }, // Primera foto izquierda
+      { url: "/photos/2.jpg", alt: "Camino entre arboles" }, // Segunda foto izquierda
+      { url: "/photos/3.jpg", alt: "Tazas de cafe" }, // Tercera foto izquierda
     ],
-    right: [
-      { url: "/photos/4.jpg", alt: "Risa espontánea" },
-      { url: "/photos/5.jpg", alt: "Atardecer rosado" },
-      { url: "/photos/6.jpg", alt: "Manos brindando" },
+    right: [ // Riel derecho de fotos
+      { url: "/photos/4.jpg", alt: "Risa espontanea" }, // Primera foto derecha
+      { url: "/photos/5.jpg", alt: "Atardecer rosado" }, // Segunda foto derecha
+      { url: "/photos/6.jpg", alt: "Manos brindando" }, // Tercera foto derecha
     ],
   },
-
-  // 🖼 Galería de recuerdos (memories).
-  memories: {
-    heading: "Momentos favoritos",
-    ariaLabel: "Galería de recuerdos fotográficos",
-    photos: [
-      { url: "/photos/m1.jpg", alt: "Brindis" },
-      { url: "/photos/m2.jpg", alt: "Paseo" },
-      { url: "/photos/m3.jpg", alt: "Pastel" },
-      { url: "/photos/m4.jpg", alt: "Playa" },
-      { url: "/photos/m5.jpg", alt: "Museo" },
-      { url: "/photos/m6.jpg", alt: "Fiesta" },
+  memories: { // Galeria opcional de recuerdos en mosaico
+    heading: "Momentos favoritos", // Titulo de la seccion de memorias
+    ariaLabel: "Galeria de recuerdos fotograficos", // Etiqueta accesible de la galeria
+    photos: [ // Lista de imagenes para la galeria
+      { url: "/photos/m1.jpg", alt: "Brindis" }, // Foto de brindis
+      { url: "/photos/m2.jpg", alt: "Paseo" }, // Foto de paseo
+      { url: "/photos/m3.jpg", alt: "Pastel" }, // Foto de pastel
+      { url: "/photos/m4.jpg", alt: "Playa" }, // Foto de playa
+      { url: "/photos/m5.jpg", alt: "Museo" }, // Foto de museo
+      { url: "/photos/m6.jpg", alt: "Fiesta" }, // Foto de fiesta
     ],
   },
-
-  // 🔗 Sección de botones para compartir la carta.
-  cta: {
-    share: "Compartir",                   // Texto principal del botón.
-    copyLabel: "Copiar enlace",           // Etiqueta del botón de copiar.
-    copiedFeedback: "Enlace copiado",     // Mensaje al copiar.
-    unavailable: "Compartir no disponible en este dispositivo", // Mensaje si no hay soporte.
+  cta: { // Textos para los botones de compartir
+    share: "Compartir", // Etiqueta principal del boton compartir
+    copyLabel: "Copiar enlace", // Etiqueta del boton secundario para copiar
+    copiedFeedback: "Enlace copiado", // Mensaje mostrado tras copiar
+    unavailable: "Compartir no disponible en este dispositivo", // Mensaje al no soportar compartir
   },
-
-  // 🧾 Pie de página (footer).
-  footer: { note: "© 2025 Con cariño para Estefania" },
-
-  // 🎵 Configuración del audio de fondo.
-  audio: {
-    src: "/happy.mp3",                             // Ruta del archivo de audio.
-    playLabel: "Reproducir canción",               // Texto accesible para el botón de play.
-    pauseLabel: "Pausar canción",                  // Texto accesible para el botón de pausa.
-    description: "Canción favorita de Estefania para el cumpleaños", // Descripción del audio.
+  footer: { note: "2025 Con carino para Kimberly" }, // Nota final mostrada en el pie de pagina
+  audio: { // Configuracion del reproductor de audio opcional
+    src: "/happy.mp3", // Ruta del archivo de audio
+    playLabel: "Reproducir cancion", // Texto accesible para el boton de reproducir
+    pauseLabel: "Pausar cancion", // Texto accesible para el boton de pausar
+    description: "Cancion favorita de Estefania para el cumpleanos", // Descripcion del audio
   },
-
-  // 🧩 NUEVO: Control de secciones activas/inactivas
-  sections: {
-    background: true, // Fondo bokeh
-    effects: true,    // Confeti y burbujas
-    hero: true,       // Título principal
-    letter: true,     // Carta con efecto de máquina de escribir
-    photos: false,     // Fotos laterales
-    timeline: true,   // Línea del tiempo
-    memories: false,   // Galería de recuerdos
-    audio: false,      // Reproductor musical
-    share: true,      // Botones para compartir
-    footer: true,     // Pie de página
+  sections: { // Interruptores por seccion para activar o ocultar bloques
+    background: true, // Muestra el fondo animado
+    effects: false, // Activa particulas y corazones
+    hero: true, // Renderiza el encabezado
+    letter: true, // Muestra la carta principal
+    photos: false, // Oculta los rieles de fotos
+    timeline: false, // Oculta la linea del tiempo
+    memories: false, // Oculta la galeria de memorias
+    audio: true, // Oculta el reproductor de audio
+    share: true, // Muestra los botones de compartir
+    footer: true, // Muestra el pie de pagina
+    loveMessage: true, // Activa el mensaje de amor neon
   },
-
-  // ♿ Configuración de accesibilidad
-  accessibility: { reducedMotionRespect: true },
+  loveMessage: { // Configuracion del mensaje neon
+    text: "TE AMO ", // Texto mostrado en el efecto neon
+    color: "#ff5f9e", // Color glow del mensaje neon
+  },
+  accessibility: { reducedMotionRespect: true }, // Respeta la preferencia de movimiento reducido
 };

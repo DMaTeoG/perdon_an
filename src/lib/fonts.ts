@@ -1,4 +1,4 @@
-import {
+﻿import {
   Architects_Daughter,
   DM_Serif_Display,
   Playfair_Display,
@@ -69,4 +69,8 @@ export function loadFonts(title: TitleFontOption) {
     bodyClass: architectsDaughter.variable,
     titleClass: chosenTitle.variable,
   };
+}
+
+export function getTitleFontClass(title: TitleFontOption) {
+  return titleFonts[title].className ?? "";
 }

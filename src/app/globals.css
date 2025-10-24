@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
   --paper-background: #fbf4ec;
@@ -73,6 +73,43 @@ body {
   50% {
     transform: scale(1.025);
   }
+}
+
+@keyframes love-neon-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.45);
+    text-shadow: 0 0 4px currentColor, 0 0 12px currentColor;
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 12px currentColor, 0 0 26px currentColor;
+  }
+  70% {
+    opacity: 0.92;
+    transform: scale(1.25);
+    text-shadow: 0 0 18px currentColor, 0 0 36px currentColor;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.55);
+    text-shadow: 0 0 22px currentColor, 0 0 52px currentColor;
+  }
+}
+
+.love-neon-base {
+  font-family: var(--font-title), cursive;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: clamp(2.5rem, 8vw, 4.75rem);
+  text-shadow: 0 0 10px currentColor, 0 0 22px currentColor;
+}
+
+.love-neon-animate {
+  animation: love-neon-pop 2.4s ease-out forwards;
 }
 
 @layer utilities {

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { birthdayContent } from "@/data/content";
@@ -14,8 +14,6 @@ import { ShareButtons } from "@/components/actions/ShareButtons";
 import { FooterNote } from "@/components/layout/FooterNote";
 import { ConfettiOrBubbles } from "@/components/feedback/ConfettiOrBubbles";
 import { AudioPlayer } from "@/components/media/AudioPlayer";
-
-/** Grid fijo: 3 columnas para que la carta no se mueva en md+ */
 const GRID_COLS = "md:grid-cols-[240px_minmax(0,640px)_240px]";
 
 function RailSlot({
@@ -25,7 +23,6 @@ function RailSlot({
   enabled: boolean;
   children: React.ReactNode;
 }) {
-  // Siempre reservamos espacio de la columna en md+.
   return (
     <div className="hidden md:block" aria-hidden={!enabled}>
       {enabled ? children : <div className="h-full w-full" />}
@@ -56,7 +53,6 @@ export default function Home() {
   }, [prefersReducedMotion]);
 
   const handleTypewriterFinished = () => {
-    // solo disparar efectos; ya no guardamos el timestamp
     setTriggerCount((prev) => prev + 1);
   };
 
@@ -72,12 +68,16 @@ export default function Home() {
         />
       )}
 
-      {birthdayContent.sections.effects && (
+      {(birthdayContent.sections.effects ||
+        birthdayContent.sections.loveMessage) && (
         <ConfettiOrBubbles
           enableConfetti={birthdayContent.effects.confetti}
-          enableBubbles={birthdayContent.effects.bubbles}
+          enableHearts={birthdayContent.effects.hearts}
+          heartColor={birthdayContent.effects.heartColor}
           trigger={triggerCount}
           prefersReducedMotion={prefersReducedMotion}
+          loveMessage={birthdayContent.loveMessage}
+          showLoveMessage={birthdayContent.sections.loveMessage}
         />
       )}
 
