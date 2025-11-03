@@ -127,6 +127,7 @@ export interface SectionsConfig {
 export interface LoveMessageConfig {
   text: string;
   color: string;
+  repeatCount?: number;
 }
 
 export interface BirthdayContent {

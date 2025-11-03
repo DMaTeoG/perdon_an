@@ -223,6 +223,12 @@ export function ConfettiOrBubbles({
   const showCanvas = !prefersReducedMotion && (enableConfetti || enableHearts);
   const shouldShowMessage = showLoveMessage && loveMessage;
   const animateMessage = shouldShowMessage && !prefersReducedMotion;
+  const repeatCount = useMemo(() => {
+    if (!loveMessage?.repeatCount) return 1;
+    const normalized = Math.round(loveMessage.repeatCount);
+    if (Number.isNaN(normalized)) return 1;
+    return Math.max(1, Math.min(12, normalized));
+  }, [loveMessage?.repeatCount]);
 
   return (
     <>
@@ -237,20 +243,27 @@ export function ConfettiOrBubbles({
       )}
 
       {shouldShowMessage && loveMessage && (
-        <div className="pointer-events-none fixed inset-0 -z-10 flex items-center justify-center">
-          <span
+        <div className="pointer-events-none fixed inset-0 -z-10 flex items-center justify-center px-6">
+          <div
             key={messageKey}
-            className={[
-              "love-neon-base",
-              animateMessage ? "love-neon-animate" : undefined,
-            ]
-              .filter(Boolean)
-              .join(" ")}
-            style={loveMessageStyle}
+            className="flex w-full max-w-[min(90vw,1600px)] flex-wrap items-center justify-evenly gap-8"
             aria-hidden="true"
           >
-            {loveMessage.text}
-          </span>
+            {Array.from({ length: repeatCount }).map((_, index) => (
+              <span
+                key={`${messageKey}-${index}`}
+                className={[
+                  "love-neon-base",
+                  animateMessage ? "love-neon-animate" : undefined,
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                style={loveMessageStyle}
+              >
+                {loveMessage.text}
+              </span>
+            ))}
+          </div>
         </div>
       )}
     </>

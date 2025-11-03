@@ -4,7 +4,7 @@ export const birthdayContent: BirthdayContent = { // Exporta el objeto principal
   theme: { palette: "nocturnoElegante" }, // Define la paleta cromatica base usada en fondos y acentos
   typography: { title: "DM Serif Display", body: "Architects Daughter" }, // Selecciona las tipografias para titulos y cuerpo
   effects: { // Agrupa los efectos visuales configurables
-    confetti: true, // Activa el confeti clasico
+    confetti: false, // Desactiva el confeti clasico
     hearts: true, // Habilita los corazones flotantes
     heartColor: "#ff5f9e", // Color base para los corazones neon
     bokeh: true, // Muestra el efecto de luces bokeh en el fondo
@@ -113,6 +113,7 @@ export const birthdayContent: BirthdayContent = { // Exporta el objeto principal
   loveMessage: { // Configuracion del mensaje neon
     text: "TE AMO ", // Texto mostrado en el efecto neon
     color: "#ff5f9e", // Color glow del mensaje neon
+    repeatCount: 7, // Cantidad de repeticiones del mensaje en pantalla
   },
   accessibility: { reducedMotionRespect: true }, // Respeta la preferencia de movimiento reducido
 };
