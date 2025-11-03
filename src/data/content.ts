@@ -11,7 +11,7 @@ export const birthdayContent: BirthdayContent = { // Exporta el objeto principal
     polaroidsFloat: true, // Hace flotar suavemente las fotos tipo polaroid
   },
   typewriter: { // Parametros del efecto maquina de escribir
-    speedMs: 60, // Velocidad en milisegundos entre cada caracter
+    speedMs: 100, // Velocidad en milisegundos entre cada caracter
     startDelayMs: 1000, // Retraso antes de iniciar la animacion
     soundClicks: true, // Reproduce clics de maquina durante la escritura
     endChime: true, // Lanza sonido final al terminar
@@ -23,42 +23,42 @@ export const birthdayContent: BirthdayContent = { // Exporta el objeto principal
     ariaLabel: "Linea del tiempo de recuerdos importantes", // Texto descriptivo para lectores de pantalla
     items: [ // Coleccion de momentos destacados
       { // Primer recuerdo destacado
-        date: "22 de agosto de 2023", // Fecha del evento
+        date: "29 de agosto de 2025", // Fecha del evento
         title: "El dia que nos conocimos", // Titulo del recuerdo
-        text: "Ese dia fue mas divertido de lo que esperaba. Nunca pense que iba a conocer a alguien como tu, y mucho menos que te volverias una amiga tan especial.", // Texto del recuerdo
-        image: { url: "/dia_c.jpg", alt: "Foto del dia que nos conocimos" }, // Imagen asociada al recuerdo
+        text: "Ese día en el concierto, gracias a Estefanía, tuve la suerte de conocerte. Recuerdo cómo hablaste de la actuación, de la historia que ibas a interpretar, y cómo tus ojos brillaban al contarlo. Fue un día especial, uno de esos que se quedan grabados sin saber por qué… Tal vez porque desde ahí supe que había algo diferente en ti. ", // Texto del recuerdo
+        image: { url: "/onomastico.jpg", alt: "Foto del dia que nos conocimos" }, // Imagen asociada al recuerdo
       },
       { // Segundo recuerdo destacado
-        date: "29 de agosto de 2025", // Fecha del evento
-        title: "Fuimos al onomastico", // Titulo del recuerdo
-        text: "Nos fuimos a disfrutar la musica. Todo se puso muy random despues, jajaja, pero lo goce un monton. Gracias por estar ahi.", // Texto del recuerdo
-        image: { url: "/onomastico.jpg", alt: "Foto del onomastico" }, // Imagen asociada al recuerdo
+        date: "12 de septiembre de 2025", // Fecha del evento
+        title: "Fuimos al gimnasio", // Titulo del recuerdo
+        text: "Me encantó ese día en el gimnasio contigo. No fue solo hacer ejercicio, fue compartir risas, momentos y sentir que contigo, hasta lo más simple se vuelve especial..", // Texto del recuerdo
+        image: { url: "/gym.jpg", alt: "Foto del onomastico" }, // Imagen asociada al recuerdo
       },
       { // Tercer recuerdo destacado
-        date: "21 de septiembre de 2025", // Fecha del evento
-        title: "Un domingo normalito", // Titulo del recuerdo
-        text: "No fue un plan epico, pero me encanto. Saliste del examen y nos pusimos a echar chisme un buen rato. Esos momentos tranquilos tambien valen oro.", // Texto del recuerdo
-        image: { url: "/random.jpg", alt: "Foto casual" }, // Imagen asociada al recuerdo
+        date: "20 de septiembre de 2025", // Fecha del evento
+        title: "dia de picnic", // Titulo del recuerdo
+        text: "20 de septiembre… un día que nunca voy a olvidar \n\n Me encantó ver tu reacción cuando te di las flores, esa sonrisa tuya lo valió todo. Ese picnic, las risas,  \n\n las miradas y lo que compartimos hicieron de ese día algo verdaderamente especial.Gracias por hacerme sentir que los pequeños detalles pueden significar tanto cuando es contigo.", // Texto del recuerdo
+        image: { url: "/car.jpg", alt: "Foto casual" }, // Imagen asociada al recuerdo
       },
     ],
   },
   hero: { // Configuracion del encabezado principal
-    title: "Feliz cumple, Kimberly", // Titular grande de la pagina
-    emoji: "🎂", // Emoji decorativo mostrado junto al titulo
-    emojiLabel: "Pastel de cumpleanos", // Descripcion accesible del emoji
+    title: "Lo que mi corazón quiere decirte, Angie", // Titular grande de la pagina
+    emoji: "💞", // Emoji decorativo mostrado junto al titulo
+    emojiLabel: "corazones invertidos", // Descripcion accesible del emoji
     scrollCta: "Ver carta", // Texto del boton para desplazarse a la carta
-    scrollAriaLabel: "Ir a la carta de cumpleanos", // Etiqueta accesible del boton de scroll
+    scrollAriaLabel: "Ir a la carta de Angie", // Etiqueta accesible del boton de scroll
   },
   letter: { // Contenido de la carta principal
-    heading: "Una carta para ti", // Encabezado del bloque de carta
+    heading: "Lo que mi corazón quiere decirte, Angie", // Encabezado del bloque de carta
     body:
-      "Hoy celebramos que llegaste a este mundo y que tuve la suerte de coincidir contigo.\n\n" + // Primer parrafo de la carta
-      "Te deseo un año lleno de cosas lindas: metas cumplidas, sorpresas buenas y dias tranquilos.\n\n" + // Segundo parrafo con deseos
-      "Que la vida te siga regalando razones para sonreir, y que nunca te falte quien te acompanE en las locuras.\n\n" + // Tercer parrafo motivacional
-      "Gracias por ser como eres y por dejarme ser parte de tu historia.\n\n" + // Cuarto parrafo de agradecimiento
-      "Feliz cumpleanos, Kimberly! 🎉🎂\n\n" + // Mensaje de felicitacion final
-      "Con carino,\nMateo", // Firma de cierre
-    ariaLabel: "Carta de cumpleanos narrada como maquina de escribir", // Descripcion accesible del bloque
+      "No soy de muchas palabras, pero contigo todo se siente diferente. Me encanta estar a\n\n" + // Primer parrafo de la carta
+      "tu lado, compartir momentos y sentir que en poco tiempo vivimos tanto." + // Segundo parrafo con deseos
+      "Sé que mereces lo mejor, y si me das la oportunidad, quiero ser esa persona que te cuide, te valore y te haga sonreír. \n\n" + // Tercer parrafo motivacional
+      "Me encantaría que dijeras que sí, pero si tu respuesta es un no, lo entenderé. Solo quería que supieras que lo que siento por ti es real y nace desde el corazón.\n\n" + // Cuarto parrafo de agradecimiento
+      "// Mensaje de felicitacion final \n\n" +
+      "Con cariño,\nMateo", // Firma de cierre
+    ariaLabel: "Carta de disculpas narrada como maquina de escribir", // Descripcion accesible del bloque
   },
   photos: { // Configuracion de las fotos decorativas laterales
     left: [ // Riel izquierdo de fotos
@@ -90,12 +90,12 @@ export const birthdayContent: BirthdayContent = { // Exporta el objeto principal
     copiedFeedback: "Enlace copiado", // Mensaje mostrado tras copiar
     unavailable: "Compartir no disponible en este dispositivo", // Mensaje al no soportar compartir
   },
-  footer: { note: "2025 Con carino para Kimberly" }, // Nota final mostrada en el pie de pagina
+  footer: { note: "2025 Con cariño para angie" }, // Nota final mostrada en el pie de pagina
   audio: { // Configuracion del reproductor de audio opcional
     src: "/tiempo.mp3", // Ruta del archivo de audio
     playLabel: "Reproducir cancion", // Texto accesible para el boton de reproducir
     pauseLabel: "Pausar cancion", // Texto accesible para el boton de pausar
-    description: "Cancion favorita de Estefania para el cumpleanos", // Descripcion del audio
+    description: "Cancion dedicada para angie ", // Descripcion del audio
   },
   sections: { // Interruptores por seccion para activar o ocultar bloques
     background: true, // Muestra el fondo animado
